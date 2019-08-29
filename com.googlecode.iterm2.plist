@@ -106,6 +106,13 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
+		<key>0x44-0x1a0000</key>
+		<dict>
+			<key>Action</key>
+			<integer>22</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
 		<key>0x45-0x1a0000</key>
 		<dict>
 			<key>Action</key>
@@ -412,9 +419,9 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>127 443 592 584 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 31 1674 996 0 0 1680 1027 </string>
+	<string>0 31 1680 996 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 31 1674 996 0 0 1680 1027 </string>
+	<string>0 82 1610 945 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -2610,6 +2617,8 @@
 			<string>/Users/bstiles</string>
 		</dict>
 	</array>
+	<key>NoSyncHaveUsedCopyMode</key>
+	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
@@ -2713,7 +2722,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-06-30T01:33:27Z</date>
+	<date>2019-08-15T15:56:57Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -2765,6 +2774,8 @@
 	<key>UseCompactLabel</key>
 	<true/>
 	<key>UseLionStyleFullscreen</key>
+	<true/>
+	<key>UseMetal</key>
 	<true/>
 	<key>WebKitDefaultFontSize</key>
 	<integer>11</integer>
