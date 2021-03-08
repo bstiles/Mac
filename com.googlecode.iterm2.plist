@@ -286,6 +286,15 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
+		<key>0x76-0x180000-0x9</key>
+		<dict>
+			<key>Action</key>
+			<integer>22</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string></string>
+		</dict>
 		<key>0x77-0x180000</key>
 		<dict>
 			<key>Action</key>
