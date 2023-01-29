@@ -1,0 +1,212 @@
+{
+  "appID" : "io.coressh.tunnel",
+  "appVersion" : "3408",
+  "profiles" : [
+    {
+      "port" : 22,
+      "logToFile" : false,
+      "user" : "ubuntu",
+      "name" : "ccm dev db",
+      "privateKeyName" : "ccm-server-key.pem",
+      "uuid" : "29656AEE-23FE-4007-8801-54A42F415022",
+      "autoConnect" : true,
+      "address" : "ccm-dev-bastion",
+      "forwardings" : [
+        {
+          "bindPort" : 14808,
+          "targetAddress" : "ccm-dev-c-2021-06-23.cszvlcq4zzqm.us-east-1.rds.amazonaws.com",
+          "type" : "local",
+          "enabled" : true,
+          "priority" : 0,
+          "bindAddress" : "127.0.0.1",
+          "targetPort" : 3306
+        }
+      ],
+      "options" : {
+        "ExitOnForwardFailure" : "yes",
+        "ServerAliveCountMax" : "3",
+        "Compression" : "yes",
+        "ProxyCommand" : "aws --profile bstiles-ccm ssm start-session --target i-00dec491e2f96a75e --document-name AWS-StartSSHSession --parameters 'portNumber=22'",
+        "UserNotification" : "yes",
+        "ServerAliveInterval" : "15"
+      },
+      "shellOptions" : {
+
+      },
+      "priority" : 0,
+      "retryAttempts" : 999,
+      "tags" : [
+
+      ]
+    },
+    {
+      "forwardings" : [
+        {
+          "bindPort" : 14806,
+          "type" : "local",
+          "enabled" : true,
+          "targetAddress" : "ccm-prod-b.cszvlcq4zzqm.us-east-1.rds.amazonaws.com",
+          "priority" : 0,
+          "targetPort" : 3306,
+          "bindAddress" : "127.0.0.1"
+        }
+      ],
+      "user" : "ubuntu",
+      "port" : 22,
+      "priority" : 0,
+      "uuid" : "92EF887D-922D-49F1-B52A-BA0F53C90D92",
+      "retryAttempts" : 999,
+      "options" : {
+        "ServerAliveCountMax" : "3",
+        "ExitOnForwardFailure" : "yes",
+        "ServerAliveInterval" : "15",
+        "ProxyCommand" : "aws --profile bstiles-ccm ssm start-session --target i-0da26737eed81076a --document-name AWS-StartSSHSession --parameters 'portNumber=22'",
+        "UserNotification" : "yes",
+        "Compression" : "yes"
+      },
+      "tags" : [
+
+      ],
+      "logToFile" : false,
+      "shellOptions" : {
+
+      },
+      "autoConnect" : true,
+      "privateKeyName" : "ccm-server-key.pem",
+      "address" : "ccm-prod-bastion",
+      "name" : "ccm prod db"
+    },
+    {
+      "tags" : [
+
+      ],
+      "port" : 22,
+      "autoConnect" : true,
+      "retryAttempts" : 999,
+      "address" : "ccm-prod-bastion",
+      "shellOptions" : {
+
+      },
+      "logToFile" : false,
+      "uuid" : "4D6E5141-8FA6-43C0-80EB-B8DA8626766F",
+      "forwardings" : [
+        {
+          "bindPort" : 14807,
+          "bindAddress" : "127.0.01",
+          "type" : "local",
+          "priority" : 0,
+          "targetPort" : 3306,
+          "enabled" : true,
+          "targetAddress" : "ccm-prod-replica-a.csfj1vqcxwpp.us-west-2.rds.amazonaws.com"
+        }
+      ],
+      "options" : {
+        "ServerAliveCountMax" : "3",
+        "ServerAliveInterval" : "15",
+        "ExitOnForwardFailure" : "yes"
+      },
+      "user" : "ubuntu",
+      "name" : "ccm prod replica db",
+      "priority" : 0
+    },
+    {
+      "shellOptions" : {
+
+      },
+      "forwardings" : [
+        {
+          "enabled" : true,
+          "type" : "remote",
+          "targetAddress" : "127.0.0.1",
+          "bindPort" : 8000,
+          "priority" : 0,
+          "targetPort" : 8080
+        }
+      ],
+      "retryAttempts" : 999,
+      "user" : "ubuntu",
+      "name" : "dev.bstiles.us proxy",
+      "tags" : [
+
+      ],
+      "privateKeyName" : "playground-us-east-1.pem",
+      "uuid" : "28A3090E-E0EC-4B28-A558-3D575C123A59",
+      "priority" : 0,
+      "options" : {
+        "ExitOnForwardFailure" : "yes",
+        "UserNotification" : "yes",
+        "ServerAliveCountMax" : "3",
+        "AddressFamily" : "inet",
+        "ServerAliveInterval" : "15"
+      },
+      "port" : 22,
+      "address" : "ec2-100-24-106-6.compute-1.amazonaws.com",
+      "autoConnect" : false,
+      "logToFile" : false
+    },
+    {
+      "tags" : [
+
+      ],
+      "shellOptions" : {
+
+      },
+      "priority" : 0,
+      "port" : 22,
+      "options" : {
+        "ExitOnForwardFailure" : "yes",
+        "ServerAliveInterval" : "15",
+        "ServerAliveCountMax" : "3"
+      },
+      "user" : "ubuntu",
+      "retryAttempts" : 999,
+      "uuid" : "5CC04F6D-9C43-4527-B218-367DF09272BB",
+      "logToFile" : false,
+      "name" : "playground-db",
+      "forwardings" : [
+        {
+          "enabled" : true,
+          "type" : "local",
+          "targetAddress" : "ip-172-31-69-2.ec2.internal",
+          "bindPort" : 14809,
+          "priority" : 0,
+          "targetPort" : 6432
+        }
+      ],
+      "autoConnect" : true,
+      "address" : "bastion.skplayground.com"
+    },
+    {
+      "options" : {
+        "ServerAliveCountMax" : "3",
+        "ServerAliveInterval" : "15",
+        "ExitOnForwardFailure" : "yes"
+      },
+      "name" : "playground-db (direct)",
+      "forwardings" : [
+        {
+          "enabled" : true,
+          "targetAddress" : "ip-172-31-69-2.ec2.internal",
+          "priority" : 0,
+          "bindPort" : 14810,
+          "targetPort" : 5432,
+          "type" : "local"
+        }
+      ],
+      "autoConnect" : true,
+      "tags" : [
+
+      ],
+      "address" : "ec2-3-85-245-8.compute-1.amazonaws.com",
+      "uuid" : "69AEFA41-44AD-450E-A13B-BD8830BE64C3",
+      "logToFile" : false,
+      "shellOptions" : {
+
+      },
+      "user" : "ubuntu",
+      "retryAttempts" : 999,
+      "port" : 22,
+      "priority" : 0
+    }
+  ]
+}
